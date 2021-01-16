@@ -1,0 +1,25 @@
+{
+  "name": "Discord YaMusic integration (unofficial)",
+  "version": "0.1",
+  "manifest_version": 2,
+  "applications": {
+    "gecko": {
+      "id": "discord-yamusic-integration-unofficial@salavatov.dev",
+      "strict_min_version": "60.0"
+    }
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://music.yandex.ru/*", "*://music.yandex.com/*"],
+      "js": ["discord_yamusic_data_crawler.js"]
+    }
+  ],
+
+  "permissions": [
+    "*://music.yandex.ru/*",
+    "*://music.yandex.com/*",
+    "http://localhost/*",
+    "webRequest"
+  ]
+}
